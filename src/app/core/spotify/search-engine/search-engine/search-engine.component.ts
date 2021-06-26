@@ -6,6 +6,11 @@ import {isLoading, spotifySearch} from '../../../../store';
 import {SpotifyApiService} from '../../../../shared/services/spotify-api.service';
 import {takeUntil, tap} from 'rxjs/operators';
 import {CommonService} from "../../../../shared/services/common.service";
+import {
+  ISpotifyAlbumsData,
+  ISpotifyArtistsData,
+  ISpotifyTracksData
+} from "../../../../shared/interfaces/spotify-search-result.interface";
 
 @Component({
   selector: 'app-search-engine',
@@ -16,13 +21,12 @@ export class SearchEngineComponent implements OnInit, OnDestroy {
 
 
   showResults = false;
-  searchResultArtists = [];
-  searchResultAlbums = [];
-  searchResultTracks = [];
+  searchResultArtists: ISpotifyArtistsData | undefined;
+  searchResultAlbums: ISpotifyAlbumsData | undefined;
+  searchResultTracks: ISpotifyTracksData | undefined;
   private onDestroy$ = new Subject();
 
   constructor(private apiSrv: SpotifyApiService,
-              public coomonSrv: CommonService,
               private store: Store<fromSpotify.SpotifyState>) { }
 
   ngOnInit(): void {
@@ -36,7 +40,6 @@ export class SearchEngineComponent implements OnInit, OnDestroy {
           this.searchResultTracks  = res.resultSearch.tracks.items.slice();
 
           this.showResults = true;
-
         }
       });
   }

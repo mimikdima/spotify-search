@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {ISpotifyArtistsData} from "../../../../../shared/interfaces/spotify-search-result.interface";
 
 @Component({
   selector: 'app-artist-card',

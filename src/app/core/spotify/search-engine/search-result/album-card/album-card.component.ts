@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {ISpotifyAlbumsData} from "../../../../../shared/interfaces/spotify-search-result.interface";
 
 @Component({
   selector: 'app-album-card',

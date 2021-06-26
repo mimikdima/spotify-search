@@ -5,6 +5,6 @@
     <span class="float-start rounded-pill">followers: <b>{{item.followers.total | number: '1.0-0'}}</b></span><br/>
   </div>
   <h5 class="card-title"></h5>
-  <p-rating [ngModel]="getPopularityStar(item.popularity)" [readonly]="true" [cancel]="false"></p-rating>
-  <div class="text-center my-4"> <a [href]="item?.external_urls.spotify" target="_blank" class="btn btn-warning">to spotify</a> </div>
+  <p-rating [ngModel]="getPopularityStar(item?.popularity)" [readonly]="true" [cancel]="false"></p-rating>
+  <div class="text-center my-4"> <a [href]="item?.external_urls?.spotify" target="_blank" class="btn btn-warning">to spotify</a> </div>
 </div>
