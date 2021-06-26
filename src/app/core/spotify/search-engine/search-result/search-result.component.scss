@@ -1,0 +1,43 @@
+
+
+
+:host ::ng-deep {
+  p-rating{
+    text-align: center;
+  }
+  .card-img, .card-img-top{
+    width: 100%;
+    height: 200px;
+  }
+
+  .btn-warning {
+    color: #000;
+    background-color: #1dcc5d;
+    border-color: #1dcc5d;
+  }
+
+  .title{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0 5px;
+  }
+}
+
+
+@media screen and (min-width: 1025px){
+  ::ng-deep :host {
+    .p-md-3 {
+      width: 20%;
+    }
+  }
+}
+
+@media screen and (max-width: 724px){
+  .p-col-12 {
+    margin-bottom: 30px;
+  }
+  .no-border {
+    border: none;
+  }
+}

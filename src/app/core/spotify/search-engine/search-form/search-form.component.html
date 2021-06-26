@@ -1,0 +1,11 @@
+<div class="input-group">
+  <span class="p-float-label">
+    <input id="float-input" [ngClass]="{'ng-invalid ng-dirty': emptyInput}" type="text" pInputText #searchValue>
+    <label for="float-input">Search In Spotify</label>
+  </span>
+  <div class="input-group-append">
+    <button class="btn btn-secondary" type="button" (click)="search(searchValue.value)">
+      <i class="pi pi-search"></i>
+    </button>
+  </div>
+</div>

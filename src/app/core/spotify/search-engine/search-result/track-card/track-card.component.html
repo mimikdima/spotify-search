@@ -1,0 +1,12 @@
+<div class="text-center my-2 title" pTooltip="{{item?.name}}" tooltipPosition="top"><b>{{item?.name}}</b></div>
+<video controls="" name="media" preload="none" width="100%" class="player">
+  <source [src]="item?.preview_url" type="audio/mpeg">
+</video>
+
+<div class="card-body" >
+  <div class="clearfix mb-3 album-name">
+    <span class="float-start rounded-pill " pTooltip="{{item?.album?.name}}">Album: <b>{{item?.album?.name}}</b></span><br/>
+    <p-rating [ngModel]="getPopularityStar(item?.popularity)" [readonly]="true" [cancel]="false"></p-rating>
+  </div>
+  <div class="text-center my-4"> <a [href]="item?.external_urls?.spotify" target="_blank" class="btn btn-warning">to spotify</a> </div>
+</div>

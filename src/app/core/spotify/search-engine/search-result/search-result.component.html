@@ -1,0 +1,33 @@
+<div class="card no-border">
+  <p-dataView #dv [value]="searchResult" [paginator]="true" [rows]="20" filterBy="name"
+               layout="grid" [sortField]="sortField" [sortOrder]="sortOrder">
+    <ng-template pTemplate="header">
+      <div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between">
+        <p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort By" (onChange)="onSortChange($event)" styleClass="p-mb-2 p-mb-md-0"></p-dropdown>
+        <span class="p-input-icon-left p-mb-2 p-mb-md-0">
+            <i class="pi pi-search"></i>
+            <input type="search" pInputText placeholder="Search by Name" (input)="filter(dv, $any($event.target).value)">
+        </span>
+      </div>
+    </ng-template>
+    <ng-template let-item pTemplate="gridItem">
+      <div class="p-col-12 p-md-3">
+        <div class="product-grid-item card">
+          <div class="col">
+            <div class="card h-100 shadow-sm" *ngIf="type === 'artist'">
+              <app-artist-card [item]="item" [noCoverImage]="noCoverImage"></app-artist-card>
+            </div>
+
+            <div class="card h-100 shadow-sm" *ngIf="type === 'albums'">
+              <app-album-card [item]="item" [noCoverImage]="noCoverImage"></app-album-card>
+            </div>
+
+            <div class="card h-100 shadow-sm" *ngIf="type === 'tracks'">
+              <app-track-card [item]="item" [noCoverImage]="noCoverImage"></app-track-card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-dataView>
+</div>

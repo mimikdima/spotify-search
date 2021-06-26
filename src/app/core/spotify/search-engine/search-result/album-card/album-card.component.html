@@ -1,0 +1,9 @@
+<div class="text-center my-2 title" pTooltip="{{item.name}}" tooltipPosition="top"><b>{{item.name}}</b></div>
+<img [src]="item.images.length > 0 ? item.images[0].url : noCoverImage" class="card-img-top" alt="{{item.name}}">
+<div class="card-body" >
+  <div class="clearfix mb-3">
+    <span class="float-start rounded-pill">Album Type: <b>{{item.album_type}}</b></span><br/>
+    <span class="float-start rounded-pill">Realise Day: <b>{{item.release_date}}</b></span><br/>
+  </div>
+  <div class="text-center my-4"> <a [href]="item?.external_urls.spotify" target="_blank" class="btn btn-warning">to spotify</a> </div>
+</div>

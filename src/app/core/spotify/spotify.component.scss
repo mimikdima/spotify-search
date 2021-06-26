@@ -1,0 +1,24 @@
+.spacer {
+  flex: 1;
+}
+
+.toolbar {
+  // position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  color: white;
+  font-weight: 600;
+  img{
+    width: 50px;
+  }
+}
+
+#wrapper{
+ // background: #f6f8fa;
+}

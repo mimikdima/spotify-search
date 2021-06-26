@@ -1,0 +1,10 @@
+.player {
+  width: 100%
+}
+
+.album-name{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0 5px;
+}

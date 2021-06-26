@@ -1,0 +1,24 @@
+
+<div class="box">
+  <div class="box-search">
+    <div class="search-box">
+      <app-search></app-search>
+    </div>
+  </div>
+</div>
+
+<div class="box" *ngIf="showResults">
+  <div class="box-result">
+    <p-tabView>
+      <p-tabPanel header="Artists">
+        <app-search-result [searchResult]="searchResultArtists" [type]="'artist'"></app-search-result>
+      </p-tabPanel>
+      <p-tabPanel header="Albums">
+        <app-search-result [searchResult]="searchResultAlbums" [type]="'albums'"></app-search-result>
+      </p-tabPanel>
+      <p-tabPanel header="Tracks">
+        <app-search-result [searchResult]="searchResultTracks" [type]="'tracks'"></app-search-result>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+</div>

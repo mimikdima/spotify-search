@@ -1,0 +1,23 @@
+// @import "~assets/styles/scrollbar";
+// @extend .scrollbar;
+.box{
+  .box-search{
+    padding: 16px;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    margin: 50px auto;
+    background: white;
+    max-width: 600px;
+    .search-box{
+      margin: 20px 0;
+    }
+    .avatar{
+      max-width: 30px;
+    }
+  }
+
+  .box-result{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
